@@ -1,6 +1,8 @@
 ﻿// A simple calculator that can perform basic operations like addition, subtraction, multiplication, and division.
 
-class Program
+namespace Calculator;
+
+internal static class Program
 {
     static void Main()
     {

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{406445B2-AA65-4DD5-B128-CD38C6A80605}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{8AAF17FB-69B3-4791-B2EC-607F4A654444}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{406445B2-AA65-4DD5-B128-CD38C6A80605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{406445B2-AA65-4DD5-B128-CD38C6A80605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{406445B2-AA65-4DD5-B128-CD38C6A80605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AAF17FB-69B3-4791-B2EC-607F4A654444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AAF17FB-69B3-4791-B2EC-607F4A654444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AAF17FB-69B3-4791-B2EC-607F4A654444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AAF17FB-69B3-4791-B2EC-607F4A654444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
