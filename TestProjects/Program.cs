@@ -1,35 +1,20 @@
-﻿string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
-int stringsCount = myStrings.Length;
+﻿const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-string myString = "";
-int periodLocation = 0;
+const string openSpan = "<span>";
+const string closeSpan = "</span>";
+const string openDiv = "<div>";
+const string closeDiv = "</div>";
 
-for (int i = 0; i < stringsCount; i++)
-{
-    myString = myStrings[i];
-    periodLocation = myString.IndexOf(".");
+int startingSpan = input.IndexOf(openSpan);
+int endingSpan = input.IndexOf(closeSpan, startingSpan);
+int startingDiv = input.IndexOf(openDiv);
+int endingDiv = input.IndexOf(closeDiv, startingDiv);
 
-    string mySentence;
+startingSpan += openSpan.Length;
+startingDiv += openDiv.Length;
 
-    // extract sentences from each string and display them one at a time
-    while (periodLocation != -1)
-    {
+string quantity = input.Substring(startingSpan, endingSpan - startingSpan);
+string output = input.Substring(startingDiv, endingDiv - startingDiv).Replace("&trade;", "&reg;");
 
-        // first sentence is the string value to the left of the period location
-        mySentence = myString.Remove(periodLocation);
-
-        // the remainder of myString is the string value to the right of the location
-        myString = myString.Substring(periodLocation + 1);
-
-        // remove any leading white-space from myString
-        myString = myString.TrimStart();
-
-        // update the comma location and increment the counter
-        periodLocation = myString.IndexOf(".");
-
-        Console.WriteLine(mySentence);
-    }
-
-    mySentence = myString.Trim();
-    Console.WriteLine(mySentence);
-}
+Console.WriteLine($"Quantity: {quantity}");
+Console.WriteLine($"Output: {output}");
