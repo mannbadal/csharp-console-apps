@@ -1,20 +1,44 @@
-﻿const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+﻿int target = 30;
+int[] coins = new int[] { 5, 5, 50, 25, 25, 10, 5 };
+int[,] result = TwoCoins(coins, target);
 
-const string openSpan = "<span>";
-const string closeSpan = "</span>";
-const string openDiv = "<div>";
-const string closeDiv = "</div>";
+if (result.Length == 0)
+{
+    Console.WriteLine("No two coins make change");
+}
+else
+{
+    Console.WriteLine("Change found at positions:");
+    for (int i = 0; i < result.GetLength(0); i++)
+    {
+        if (result[i, 0] == -1)
+        {
+            break;
+        }
+        Console.WriteLine($"{result[i, 0]},{result[i, 1]}");
+    }
+}
 
-int startingSpan = input.IndexOf(openSpan);
-int endingSpan = input.IndexOf(closeSpan, startingSpan);
-int startingDiv = input.IndexOf(openDiv);
-int endingDiv = input.IndexOf(closeDiv, startingDiv);
+int[,] TwoCoins(int[] coins, int target)
+{
+    int[,] result = { { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 } };
+    int count = 0;
 
-startingSpan += openSpan.Length;
-startingDiv += openDiv.Length;
-
-string quantity = input.Substring(startingSpan, endingSpan - startingSpan);
-string output = input.Substring(startingDiv, endingDiv - startingDiv).Replace("&trade;", "&reg;");
-
-Console.WriteLine($"Quantity: {quantity}");
-Console.WriteLine($"Output: {output}");
+    for (int curr = 0; curr < coins.Length; curr++)
+    {
+        for (int next = curr + 1; next < coins.Length; next++)
+        {
+            if (coins[curr] + coins[next] == target)
+            {
+                result[count, 0] = curr;
+                result[count, 1] = next;
+                count++;
+            }
+            if (count == result.GetLength(0))
+            {
+                return result;
+            }
+        }
+    }
+    return (count == 0) ? new int[0, 0] : result;
+}
