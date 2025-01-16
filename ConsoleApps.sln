@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoPets3", "ContosoPets
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PettingZoo", "PettingZoo\PettingZoo.csproj", "{065AFAFC-5A87-48F0-B9ED-C71CB42BE131}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "SnakeGame\SnakeGame.csproj", "{DDF0C780-748D-46DF-8687-7ED8D23FF30C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +51,9 @@ Global
 		{065AFAFC-5A87-48F0-B9ED-C71CB42BE131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{065AFAFC-5A87-48F0-B9ED-C71CB42BE131}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{065AFAFC-5A87-48F0-B9ED-C71CB42BE131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF0C780-748D-46DF-8687-7ED8D23FF30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF0C780-748D-46DF-8687-7ED8D23FF30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF0C780-748D-46DF-8687-7ED8D23FF30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF0C780-748D-46DF-8687-7ED8D23FF30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
